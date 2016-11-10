@@ -1,0 +1,14 @@
+
+public class stack {
+	
+	int capacity;
+	int top;
+	int[] s;
+	
+	stack(int cap){
+		this.capacity = cap;
+		s = new int[this.capacity];
+		top=-1;
+	}
+
+}

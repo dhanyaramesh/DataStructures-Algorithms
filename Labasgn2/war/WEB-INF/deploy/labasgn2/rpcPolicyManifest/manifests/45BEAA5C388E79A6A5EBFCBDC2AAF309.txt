@@ -1,0 +1,2 @@
+serviceClass: labtwo.client.GreetingService
+path: 8F87F83D0829D254864445984350804F.gwt.rpc

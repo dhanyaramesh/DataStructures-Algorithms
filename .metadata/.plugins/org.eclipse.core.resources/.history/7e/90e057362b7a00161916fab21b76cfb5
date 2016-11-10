@@ -1,0 +1,30 @@
+package main.java.com.lab0;
+
+import java.util.Scanner;
+
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
+/**
+ * 
+ * @author dhanyaramesh
+ *
+ */
+public class App {
+	public static void main(String[] args) {
+		ApplicationContext context = new ClassPathXmlApplicationContext(
+				"beans.xml");
+		greetings obj=null;
+		Scanner in = new Scanner(System.in);
+		System.out.println("Enter the name of the greeter");
+		try{
+			String name = in.next();
+			if(context.getBean(name)!=null)
+				obj = (greetings) context.getBean(name);
+			System.out.println(obj.getGreeting());
+		}catch(Exception e){
+			e.printStackTrace();
+		}
+		
+	}
+
+}

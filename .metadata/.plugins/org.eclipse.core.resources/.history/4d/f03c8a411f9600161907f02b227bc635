@@ -1,0 +1,15 @@
+package hackerRank;
+
+import java.io.File;
+
+public class myDirectory {
+	
+	public static String printDirectoryStructure(File directory){
+		StringBuilder sb = new StringBuilder();
+		if(!directory.isDirectory()){
+			throw new IllegalArgumentException("not a directory");
+		}
+		return sb.toString();
+	}
+
+}

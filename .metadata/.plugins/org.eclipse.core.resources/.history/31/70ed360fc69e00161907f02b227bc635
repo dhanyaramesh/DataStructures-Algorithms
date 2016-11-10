@@ -1,0 +1,44 @@
+/**
+ * 
+ * @author dhanyaramesh
+ *
+ */
+public class longestCommonSubsequence {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		String A = "acbaed";
+		String B = "abcadf";
+
+		int[][] lcs = new int[A.length()][B.length()];
+		// initializing first row and col to 0
+		for(int j=0;j<B.length();j++){
+			lcs[0][j]=0;
+		}
+
+		for(int i=0;i<A.length();i++){
+			lcs[i][0]=0;
+		}
+
+		for(int i=0;i<A.length();i++){
+			for(int j=0;j<B.length();j++){
+				if(A.charAt(i)==B.charAt(j)){
+					lcs[i+1][j+1]=lcs[i][j]+1;
+				}
+				else{
+					lcs[i+1][j+1] = Math.max(lcs[i][j-1], lcs[i-1][j]);
+				}
+			}
+		}
+		
+		for(int i=0;i<=A.length();i++){
+			for(int j=0;j<=B.length();j++){
+				System.out.print(lcs[i][j] + "   ");
+				
+			}
+			System.out.println();
+		}
+
+	}
+
+}

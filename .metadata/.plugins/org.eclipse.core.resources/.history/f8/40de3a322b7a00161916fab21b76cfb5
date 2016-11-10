@@ -1,0 +1,5 @@
+package main.java.com.lab0;
+
+public class InvalidInputException {
+
+}

@@ -1,0 +1,26 @@
+
+public class queueUsing2Stacks {
+	
+	stack s1;
+	stack s2;
+	int queue_size;
+	
+	queueUsing2Stacks(int cap){
+		queue_size = cap;
+		s1 = new stack(queue_size);
+		s2 = new stack(queue_size);
+	}
+	
+	public void enQ(int val){
+		try{
+			if(s1.top+s2.top < queue_size)
+				s1.push(val);
+			else
+				throw new Exception("overfull - queue full");
+		}catch(Exception e){
+			System.out.println(e.getMessage());
+		}
+		
+	}
+
+}

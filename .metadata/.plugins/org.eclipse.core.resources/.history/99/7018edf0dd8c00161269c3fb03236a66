@@ -1,0 +1,33 @@
+package main.java;
+
+import java.util.Scanner;
+
+import org.springframework.beans.factory.NoSuchBeanDefinitionException;
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
+
+import main.java.com.lab0.greetings;
+
+public class App {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		ApplicationContext context = new ClassPathXmlApplicationContext(
+				"beans.xml");
+		greetings obj=null;
+		Scanner in = new Scanner(System.in);
+		System.out.println("Enter the name of the greeter");
+		try{
+			String name = in.next();
+			obj = (greetings) context.getBean(name);
+			System.out.println(obj.getGreeting());
+		}catch(NoSuchBeanDefinitionException e){
+			System.out.println("Exception : Greeter not found");
+			//e.printStackTrace();
+		}catch(Exception e){
+			e.printStackTrace();
+		}
+
+	}
+
+}

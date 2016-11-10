@@ -1,0 +1,24 @@
+package edu.sjsu.cmpe275.aop;
+
+import java.io.IOException;
+
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.annotation.Configuration;
+//import org.springframework.context.annotation.EnableAspectJAutoProxy;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
+
+
+@Configuration
+@AspectJAutoProxy
+public class app {
+	public static void main(String args[]) throws IllegalArgumentException, IOException{
+		TweetServiceImpl tser;
+		//= new TweetServiceImpl();
+		ApplicationContext context = new ClassPathXmlApplicationContext(
+				"aopBeans.xml");
+		tser = (TweetServiceImpl) context.getBean("tweetService");
+		tser.tweet("tom", "hello from tom");
+		
+	}
+
+}

@@ -1,0 +1,6 @@
+package main.java.aspects;
+
+@Aspect
+public class StatsAspect {
+
+}

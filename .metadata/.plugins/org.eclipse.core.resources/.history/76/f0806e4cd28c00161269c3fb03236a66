@@ -1,0 +1,8 @@
+package main.java.aspects;
+
+import org.aspectj.lang.annotation.Aspect;
+
+@Aspect
+public class StatsAspect {
+
+}

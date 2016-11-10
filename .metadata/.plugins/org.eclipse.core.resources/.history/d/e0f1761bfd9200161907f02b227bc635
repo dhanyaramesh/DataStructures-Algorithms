@@ -1,0 +1,26 @@
+package hackerRank;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class testFibonacciIterator {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		ArrayList<Integer> items = new ArrayList<Integer>();
+		int i=0;
+		while(i<15){
+			items.add(i);
+			i++;
+		}
+		
+		System.out.println(items);
+	    FibonacciIterator fi = new FibonacciIterator(items);
+	    while(fi.hasNext()){
+	    	System.out.println(fi.next());
+	    }
+
+	}
+
+}

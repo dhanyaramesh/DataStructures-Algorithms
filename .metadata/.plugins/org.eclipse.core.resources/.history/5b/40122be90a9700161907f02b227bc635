@@ -1,0 +1,33 @@
+package hackerRank;
+
+public class google1 {
+	
+	/*public static void solution(int x){
+		try{
+			if(x<10 && x>Math.pow(10, 10)){
+				throw new Exception("invalid number - out of bound");
+			}
+			int i = 5; // number of digits in x
+			int n=1;
+			while(n>=5){
+				int xy = x % Math.pow(10, n);
+				n++;
+				int 
+			}
+			
+		}catch(Exception e){
+			
+		}
+		
+	}*/
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		int x = 2345678;
+		System.out.println((int)Math.log10(x));
+		
+
+	}
+
+}

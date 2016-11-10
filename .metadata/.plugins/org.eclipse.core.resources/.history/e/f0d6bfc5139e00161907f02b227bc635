@@ -1,0 +1,77 @@
+package hackerRank;
+
+public class reverseLL {
+	
+	public static class Node{
+		int data;
+		Node next;
+		Node(int data){
+			this.data = data;
+			this.next=null;		
+		}
+		
+	   public static Node insert(Node head,int d){
+		   Node oldhead = head;
+		   if(head==null){
+			   head = new Node(d);
+			   return head;
+		   }
+		   while(head.next!=null){
+			   head=head.next;
+		   }
+		   Node newNode = new Node(d);
+		   head.next =newNode;
+		   return oldhead;
+		   
+	   }
+	   
+	   public static Node reverse(Node head){
+		   //Node oldhead = head;
+		   Node temp = null;
+		  // Node current = head;
+		   Node nextnode;
+		   while(head!=null){
+			   nextnode = head.next;
+			   head.next= temp;
+			   temp = head;
+			   head=nextnode;	   
+			   
+		   }
+		   
+		   return temp;
+	   }
+	   
+	   public static void add(Node h1, Node h2){
+		   
+	   }
+	   
+	   
+	}
+
+	public static void main(String[] args) {
+      
+      Node h = new Node(1);
+      h = h.insert(h,2);
+      h = h.insert(h,3);
+      h = h.insert(h,3);
+      h = h.insert(h,3);
+      
+      Node h2 = new Node(1);
+      h2=h2.insert(h2, 3);
+      
+      Node.add(h, h2);
+      
+      
+      //h=h.reverse(h);
+      
+      while(h!=null){
+    	  System.out.println(h.data);
+    	  h=h.next;
+      }
+      
+      
+      
+
+	}
+
+}

@@ -1,0 +1,64 @@
+package hackerRank;
+
+public class google1 {
+	
+	public static void solution(int x){
+		try{
+			if(x<10 && x>Math.pow(10, 10)){
+				throw new Exception("invalid number - out of bound");
+			}
+			int i = (int)Math.log10(x) +1; // number of digits in x
+			int n=1;
+			while(n>=i){
+				int xy = (int) (x % Math.pow(10, n));  //last
+				int yy = (int) (x % Math.pow(10, n+1)); //last but one
+				int avg = (int)(xy + yy)/2;
+				
+			}
+			
+		}catch(Exception e){
+			
+		}
+		
+	}
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		int x = 623315;
+	//	System.out.println((int)Math.log10(x));
+		
+		String temp = Integer.toString(x);
+		int[] newGuess = new int[temp.length()];
+		for (int i = 0; i < temp.length(); i++)
+		{
+		    newGuess[i] = temp.charAt(i) - '0';
+		}
+		/*for (int i = 0; i < temp.length(); i++){
+			System.out.println(newGuess[i]);
+		}*/
+	
+		int max_val =-1;
+		for(int i=0;i<newGuess.length-1;i++){
+			int avg = (int) Math.ceil((newGuess[i]+newGuess[i+1])/2);
+			
+			String max = String.valueOf(avg);
+			StringBuilder sb = new StringBuilder();
+			
+			sb.append(temp.substring(0, i));
+			sb.append(max);
+			sb.append(temp.substring(i+2));
+			
+			int val = Integer.parseInt(sb.toString());
+			if(val > max_val )
+				max_val = val;
+			
+			System.out.println(sb.toString());
+			
+		}
+		
+		System.out.println("max" + max_val);
+
+	}
+
+}

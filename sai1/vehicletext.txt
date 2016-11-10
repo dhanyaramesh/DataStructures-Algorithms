@@ -1,0 +1,7 @@
+jetski:
+ Model : fa
+ Color : dfs
+ Cost : 4.0
+ Category : 1-manned
+ BodyMaterial : Complete Fibre
+ MPG : 2.4Miles/Gallon

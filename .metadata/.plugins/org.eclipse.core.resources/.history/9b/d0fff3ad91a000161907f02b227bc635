@@ -1,0 +1,54 @@
+
+public class stack {
+	
+	int capacity;
+	int top;
+	int[] s;
+	
+	stack(int cap){
+		this.capacity = cap;
+		s = new int[this.capacity];
+		top=-1;
+	}
+	
+	public int getTop(){
+		return this.top;
+	}
+	
+	public int pop(){
+		int val=-1;
+		try{
+			if(top>-1){
+				val = s[top];
+				top--;
+				
+			}
+			else
+				throw new Exception("underflow - stack empty");
+			
+		}catch(Exception e){
+			System.out.println(e.getMessage());
+		}
+		
+		return val;
+	}
+	
+	public void push(int val){
+		
+		try{
+			if(top<capacity-1){
+				s[top] = val;
+				top++;
+			}
+			else
+				throw new Exception("overflow - stack full");
+			
+		}catch(Exception e){
+			System.out.println(e.getMessage());
+		}
+		
+		return val;
+	}
+	
+
+}

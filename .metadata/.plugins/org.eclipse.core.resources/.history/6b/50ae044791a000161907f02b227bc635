@@ -1,0 +1,37 @@
+
+public class stack {
+	
+	int capacity;
+	int top;
+	int[] s;
+	
+	stack(int cap){
+		this.capacity = cap;
+		s = new int[this.capacity];
+		top=-1;
+	}
+	
+	public int getTop(){
+		return this.top;
+	}
+	
+	public int pop(){
+		try{
+			if(top>-1){
+				int val = s[top];
+				top--;
+				return val;
+			}
+			else
+				throw new exception("underflow - nothing to pop");
+			
+		}catch(Exception e){
+			System.out.println(e.getMessage());
+		}
+		
+		
+	}
+	
+	
+
+}

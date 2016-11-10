@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename compilation unit &apos;orderingSystem.UserInputMismatchException.java&apos; to &apos;UserChoiceException.java&apos;&#x0A;- Original project: &apos;sai1&apos;&#x0A;- Original element: &apos;orderingSystem.UserInputMismatchException.java&apos;&#x0A;- Renamed element: &apos;orderingSystem.UserChoiceException.java&apos;" description="Rename compilation unit &apos;UserInputMismatchException.java&apos;" flags="2" id="org.eclipse.jdt.ui.rename.compilationunit" input="/src&lt;orderingSystem{UserInputMismatchException.java" name="UserChoiceException.java" references="false" stamp="1443580880755" version="1.0"/>
+</session>

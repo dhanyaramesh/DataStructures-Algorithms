@@ -1,0 +1,20 @@
+package main.java.com.lab0;
+/**
+ * 
+ * @author dhanyaramesh
+ *
+ */
+public class greetings implements greeter {
+	private String name;
+	
+	public void setName(String name){
+		this.name=name;
+	}
+	/**
+	 * 
+	 */
+	public String getGreeting(){
+		return "hello from "+ name ;
+	}
+
+}

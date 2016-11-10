@@ -1,0 +1,19 @@
+package hackerRank;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class testFibonacciIterator {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		Object obj = new Integer[]{1,2,3,4,5};
+		System.out.println(obj.getClass().getTypeName());
+	    ArrayList<Integer> items =(ArrayList<Integer>) obj;
+		System.out.println(items);
+	    
+
+	}
+
+}

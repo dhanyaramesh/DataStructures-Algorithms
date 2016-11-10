@@ -1,0 +1,27 @@
+/**
+ * 
+ * @author dhanyaramesh
+ *
+ */
+public class longestCommonSubsequence {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		String A = "";
+		String B = "";
+
+		int[][] lcs = new int[A.length()][B.length()];
+		// initializing first row and col to 0
+		for(int j=0;j<B.length();j++){
+			lcs[0][j]=0;
+		}
+
+		for(int i=0;i<A.length();i++){
+			lcs[i][0]=0;
+		}
+
+
+
+	}
+
+}

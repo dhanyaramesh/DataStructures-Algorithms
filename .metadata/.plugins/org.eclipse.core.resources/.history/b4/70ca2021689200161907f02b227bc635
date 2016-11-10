@@ -1,0 +1,26 @@
+package hackerRank;
+
+import java.util.Iterator;
+
+public class FibonacciIterator implements Iterator {
+	 public static int i1 = 0;
+	 public static int i2 = 1;
+	 
+	 FibonacciIterator(){
+		 this.i = 0;
+	 }
+
+	@Override
+	public boolean hasNext() {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
+	@Override
+	public Object next() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+	
+
+}

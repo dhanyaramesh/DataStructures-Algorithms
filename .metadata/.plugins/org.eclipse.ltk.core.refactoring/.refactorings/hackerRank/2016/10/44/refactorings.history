@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename type &apos;hackerRank.reverseLL&apos; to &apos;reverseLLAndAddTwoLL&apos;&#x0A;- Original project: &apos;hackerRank&apos;&#x0A;- Original element: &apos;hackerRank.reverseLL&apos;&#x0A;- Renamed element: &apos;hackerRank.reverseLLAndAddTwoLL&apos;&#x0A;- Update references to refactored element&#x0A;- Update textual occurrences in comments and strings" description="Rename type &apos;reverseLL&apos;" flags="589830" id="org.eclipse.jdt.ui.rename.type" input="/src&lt;hackerRank{reverseLL.java[reverseLL" matchStrategy="1" name="reverseLLAndAddTwoLL" qualified="false" references="true" similarDeclarations="false" stamp="1477772681451" textual="false" version="1.0"/>
+</session>

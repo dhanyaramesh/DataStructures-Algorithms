@@ -1,0 +1,82 @@
+package hackerRank;
+import java.util.Scanner;
+import java.util.Stack;
+
+
+public class Directory2 {
+    static class File{
+        public int total;
+        public boolean found;
+        public File(int total) {
+            this.total = total;
+            this.found = false;
+        }
+    }
+    private static int dir(String thisline) {
+        if(!thisline.contains(".")) {
+            return 1;
+        }
+        return 0;
+    }
+    private static int pic(String thisline) {
+        if(thisline.contains("jpeg") || thisline.contains("gif") || thisline.contains("png")) {
+            return 1;
+        }
+        else {
+            return 0;
+        }
+    }
+    private static int level(String thisline) {
+        int i = 0;
+        for (i = 0; i < thisline.length(); i++) {
+            if (thisline.charAt(i) != ' ') {
+                break;
+            }
+        }
+        return i;
+    }
+    public static void main(String[] args) {
+        int total = 0;
+        String S = "dir1\n" +
+                " dir11\n" +
+                "  im.png\n" +
+                "dir2\n" +
+                " im.png";
+        Scanner sc = new Scanner(S);
+        String fileOrDir = "";
+        int answer = 0;
+        int next = 0;
+        Stack<File> stack = new Stack<>();
+        while(sc.hasNextLine()) {
+            fileOrDir = sc.nextLine();
+            int level = level(fileOrDir);
+            if(level != next) {
+                int remove = next-level;
+                for(int i=0;i<remove;i++) {
+                    File top = stack.pop();
+                    int thistotal = top.total;
+                    total = total-thistotal;
+                }
+                next = next-remove;
+            }
+            int picOrNot = pic(fileOrDir);
+            if(picOrNot == 1) {
+                if (!stack.peek().found) {
+                    answer = answer + total;
+                    stack.peek().found = true;
+                }
+            }
+            else {
+                int dirOrNot = dir(fileOrDir);
+                if (dirOrNot == 1) {
+                    int thistotal = fileOrDir.length()+1-level;
+                    File newFile = new File(thistotal);
+                    stack.push(newFile);
+                    next = next+1;
+                    total = total+thistotal;
+                }
+            }
+        }
+        System.out.println(answer);
+    }
+}

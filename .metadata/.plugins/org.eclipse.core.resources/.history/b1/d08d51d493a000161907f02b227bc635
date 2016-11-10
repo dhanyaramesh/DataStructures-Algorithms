@@ -1,0 +1,18 @@
+
+public class queueUsing2Stacks {
+	
+	stack s1;
+	stack s2;
+	int queue_size;
+	
+	queueUsing2Stacks(int cap){
+		queue_size = cap;
+		s1 = new stack(queue_size);
+		s2 = new stack(queue_size);
+	}
+	
+	public void enQ(int val){
+		s1.push(val);
+	}
+
+}

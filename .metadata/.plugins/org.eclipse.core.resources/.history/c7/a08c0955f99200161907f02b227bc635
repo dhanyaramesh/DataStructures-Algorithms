@@ -1,0 +1,47 @@
+package hackerRank;
+
+import java.util.ArrayList;
+import java.util.Iterator;
+import java.util.List;
+
+public class FibonacciIterator implements Iterator {
+	
+	 private Integer current = 0;
+	 private ArrayList<Integer> index = new ArrayList<Integer>();
+	 
+	 FibonacciIterator(List items){
+		 int n=0;
+		 this.current=0;
+		 index.add(0);
+		 index.add(1);
+		 int i=0;
+		 while(i<n){
+			 index.add(index.get(i)+index.get(i+1));
+			 i++;
+			 
+		 }
+	 }
+
+	@Override
+	public boolean hasNext() {
+		// TODO Auto-generated method stub
+		if(next()!=null){
+			return true;
+		}
+		
+		
+		return false;
+	}
+
+	@Override
+	public Object next() {
+		// TODO Auto-generated method stub
+		//if(item.get(index.get(current))!=null){
+			//return item.get(index.get(current++));
+		//}
+			
+		return null;
+	}
+	
+
+}

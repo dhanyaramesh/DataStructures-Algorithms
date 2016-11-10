@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">&#x0A;<refactoring comment="Delete resource &apos;edu.sjsu.cmpe275&apos;" deleteContents="true" description="Delete resource &apos;edu.sjsu.cmpe275&apos;" element1="/edu.sjsu.cmpe275" flags="7" id="org.eclipse.ltk.core.refactoring.delete.resources" resources="1" stamp="1475885474623"/>&#x0A;<refactoring comment="Delete resource &apos;edu.sjsu.cmpe275.aop&apos;" deleteContents="true" description="Delete resource &apos;edu.sjsu.cmpe275.aop&apos;" element1="/edu.sjsu.cmpe275.aop" flags="7" id="org.eclipse.ltk.core.refactoring.delete.resources" resources="1" stamp="1475902742820"/>
+</session>

@@ -1,0 +1,17 @@
+
+public class maximumContiguousSubarray {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		int[] A={};
+		int max_so_far = 0;
+		int max_till_here=0;
+		for(int a:A){
+			max_till_here = max
+		}
+	
+
+	}
+
+}

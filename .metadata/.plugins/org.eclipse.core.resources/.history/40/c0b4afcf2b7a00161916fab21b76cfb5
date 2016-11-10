@@ -1,0 +1,34 @@
+package main.java.com.lab0;
+
+import java.util.Scanner;
+
+import org.springframework.beans.BeansException;
+import org.springframework.beans.factory.NoSuchBeanDefinitionException;
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
+/**
+ * 
+ * @author dhanyaramesh
+ *
+ */
+public class App {
+	public static void main(String[] args) throws NoSuchBeanDefinitionException{
+		ApplicationContext context = new ClassPathXmlApplicationContext(
+				"beans.xml");
+		greetings obj=null;
+		Scanner in = new Scanner(System.in);
+		System.out.println("Enter the name of the greeter");
+		try{
+			String name = in.next();
+			obj = (greetings) context.getBean(name);
+			System.out.println(obj.getGreeting());
+		}catch(NoSuchBeanDefinitionException e){
+			System.out.println("no bean dude");
+			//e.printStackTrace();
+		}catch(Exception e){
+			e.printStackTrace();
+		}
+		
+	}
+
+}

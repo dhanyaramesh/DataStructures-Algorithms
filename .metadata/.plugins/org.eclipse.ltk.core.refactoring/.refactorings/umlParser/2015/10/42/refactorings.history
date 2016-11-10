@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;umlParser/src/text.txt&apos; to &apos;text.java&apos;" description="Rename resource &apos;text.txt&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="src/text.txt" name="text.java" stamp="1444630951196" updateReferences="true"/>
+</session>

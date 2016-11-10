@@ -1,0 +1,7 @@
+Car:
+ Model : dasf
+ Color : fda
+ Cost : 3.0
+ Type : Sedan
+ Towing : Included
+ MPG : 20.7Miles/Gallon

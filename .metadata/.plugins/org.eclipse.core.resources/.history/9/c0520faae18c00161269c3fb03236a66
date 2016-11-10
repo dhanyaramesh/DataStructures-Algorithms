@@ -1,0 +1,28 @@
+package main.java;
+
+import java.io.IOException;
+import java.util.Scanner;
+
+import org.springframework.beans.factory.NoSuchBeanDefinitionException;
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
+
+
+public class App {
+
+	public static void main(String[] args) throws IllegalArgumentException, IOException {
+		// TODO Auto-generated method stub
+		TweetServiceImpl tser = new TweetServiceImpl();
+		ApplicationContext context = new ClassPathXmlApplicationContext(
+				"SpringBeans.xml");
+		Scanner in = new Scanner(System.in);
+		System.out.println("Enter the name of the greeter");
+			String name = in.nextLine();
+			tser =  (TweetServiceImpl) context.getBean("tweetServiceImpl");
+			tser.tweet("Tom", "hello from tom");
+			//System.out.println(obj.getGreeting());
+		
+
+	}
+
+}

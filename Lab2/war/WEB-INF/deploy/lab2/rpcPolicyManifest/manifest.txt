@@ -1,0 +1,3 @@
+# Module lab2
+# RPC service class, partial path of RPC policy file
+labtwo.client.GreetingService, 8F87F83D0829D254864445984350804F.gwt.rpc

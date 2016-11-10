@@ -1,0 +1,19 @@
+package edu.sjsu.cmpe275.aop;
+
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
+
+
+
+public class app {
+	public static void main(String args[]){
+		TweetServiceImpl tser;
+		//= new TweetServiceImpl();
+		ApplicationContext context = new ClassPathXmlApplicationContext(
+				"SpringBeans.xml");
+		tser = (TweetServiceImpl) context.getBean("tweetServiceImpl");
+		tser.tweet("tom", "hello from tom");
+		
+	}
+
+}

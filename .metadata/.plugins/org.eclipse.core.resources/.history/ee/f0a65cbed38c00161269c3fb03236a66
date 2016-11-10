@@ -1,0 +1,21 @@
+package main.java.aspects;
+
+import org.aopalliance.intercept.Joinpoint;
+import org.aspectj.lang.JoinPoint;
+import org.aspectj.lang.annotation.After;
+import org.aspectj.lang.annotation.Aspect;
+
+@Aspect
+public class StatsAspect {
+	
+	@After("execution(* /aop/src/main/java/TweetService.tweet(..))")
+	public void logTweet(JoinPoint jp){
+		
+		String s = (String)jp.getArgs()[0];
+		
+		System.out.println("hello " + (String)((Object) jp).getArgs()[0]);
+		
+	}
+	
+
+}
